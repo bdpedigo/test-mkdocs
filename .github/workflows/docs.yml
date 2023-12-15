@@ -34,7 +34,7 @@ jobs:
 
       - name: checkout branch 
         run: |
-            git fetch origin gh-pages --depth=1
+            git fetch origin gh-pages --depth=1a
 
       - uses: actions/setup-python@v4
         with:
@@ -52,6 +52,7 @@ jobs:
         run: |
           poetry install --with dev --no-root
           poetry run mike deploy --push --update-aliases dev
+          poetry run mike set-default dev --push
 
     #   - name: deploy
     #     uses: peaceiris/actions-gh-pages@v3

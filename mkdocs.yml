@@ -48,6 +48,5 @@ extra:
     provider: mike
 
 plugins:
-    - search:
-        separator: '[\s\-\.]+'
-        lang: [es, en]
+  - mike: 
+      canonical_version: "latest"
