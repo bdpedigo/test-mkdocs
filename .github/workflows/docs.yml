@@ -34,7 +34,7 @@ jobs:
 
       - name: checkout branch 
         run: |
-            git fetch origin gh-pages --depth=1a
+            git fetch origin gh-pages --depth=1
 
       - uses: actions/setup-python@v4
         with:
