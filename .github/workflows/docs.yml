@@ -23,6 +23,13 @@ jobs:
 
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - name: test 
+        run: |
+          echo "${GITHUB_ACTOR}"
+          echo "${GITHUB_REPOSITORY}"
+          echo "${GITHUB_SHA}"
+          echo "${GITHUB_DOMAIN}"
+
       - uses: actions/checkout@v4
 
       - uses: actions/setup-python@v4
