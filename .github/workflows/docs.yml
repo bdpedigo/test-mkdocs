@@ -51,9 +51,9 @@ jobs:
       - name: build documentation
         run: |
           poetry install --with dev --no-root
+          poetry run mike set-default stable --push
           poetry run mike deploy --push --update-aliases dev
-          poetry run mike set-default dev --push
-
+          
     #   - name: deploy
     #     uses: peaceiris/actions-gh-pages@v3
     #     with:
