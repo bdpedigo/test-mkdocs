@@ -15,12 +15,8 @@ theme:
 markdown_extensions:
   - markdown.extensions.admonition:
   - markdown.extensions.toc:
-      slugify: !!python/name:pymdownx.slugs.uslugify
       permalink: "#"
       baselevel: 2
-  - pymdownx.emoji:
-      emoji_index: !!python/name:materialx.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg
   - pymdownx.superfences:
       preserve_tabs: true
   - pymdownx.arithmatex:
@@ -55,6 +51,3 @@ plugins:
     - search:
         separator: '[\s\-\.]+'
         lang: [es, en]
-    - tags:
-        tags_folder: /tmp/aux/my_notes
-        tags_template: theme/tags.md.template
