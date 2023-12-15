@@ -34,7 +34,7 @@ jobs:
 
       - name: build documentation
         run: |
-          poetry install --with dev
+          poetry install --with dev --no-root
           poetry run mike deploy --push --update-aliases dev
 
     #   - name: deploy
