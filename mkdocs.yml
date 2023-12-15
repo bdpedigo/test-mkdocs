@@ -1,0 +1,60 @@
+site_name: test-mkdocs
+site_description: test mkdocs
+
+theme:
+  name: material
+  language: es
+  custom_dir: theme
+  palette:
+    primary: deeppurple
+    accent: teal
+  features:
+    - navigation.tabs
+    - navigation.instant
+
+markdown_extensions:
+  - markdown.extensions.admonition:
+  - markdown.extensions.toc:
+      slugify: !!python/name:pymdownx.slugs.uslugify
+      permalink: "#"
+      baselevel: 2
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.superfences:
+      preserve_tabs: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.inlinehilite:
+  - pymdownx.tabbed:
+  - pymdownx.details:
+  - pymdownx.tilde:
+  - pymdownx.mark:
+  - pymdownx.keys:
+  - pymdownx.progressbar:
+  - pymdownx.smartsymbols:
+  - pymdownx.tasklist:
+  - attr_list:
+
+
+
+copyright: (c) Ben Pedigo
+
+extra_css:
+  - extra.css
+  - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css
+extra_javascript:
+  - extra.js
+  - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.js
+
+extra:
+  version:
+    provider: mike
+
+plugins:
+    - search:
+        separator: '[\s\-\.]+'
+        lang: [es, en]
+    - tags:
+        tags_folder: /tmp/aux/my_notes
+        tags_template: theme/tags.md.template
